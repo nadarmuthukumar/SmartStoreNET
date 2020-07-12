@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" />
-  <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props" Condition="Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props')" />
   <Import Project="..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props" Condition="Exists('..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props')" />
-  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" />
+  <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -76,7 +77,6 @@
       <HintPath>..\..\packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Autofac, Version=4.9.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -84,7 +84,6 @@
     </Reference>
     <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="BundleTransformer.Autoprefixer, Version=1.10.2.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
       <HintPath>..\..\packages\BundleTransformer.Autoprefixer.1.10.2\lib\net40\BundleTransformer.Autoprefixer.dll</HintPath>
@@ -109,15 +108,12 @@
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
@@ -141,7 +137,6 @@
       <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="MsieJavaScriptEngine, Version=3.0.1.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
@@ -156,7 +151,6 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
@@ -185,7 +179,6 @@
       <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -212,7 +205,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
@@ -1073,6 +1065,22 @@
     <Content Include="Content\shared\_custom-scrollbar.scss" />
     <Content Include="Content\shared\_custom-scrollbar-buttons.scss" />
     <Content Include="Content\shared\_media.scss" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="Content\vendors\x-editable\README.txt" />
     <Content Include="favicon.ico" />
     <Content Include="favicon.readme.txt" />
@@ -1269,6 +1277,7 @@
     <Content Include="Themes\Flex\Content\images\star-on-12.png" />
     <Content Include="Themes\Flex\Content\images\star-on.png" />
     <Content Include="Content\Web.config" />
+    <None Include="packages.config" />
     <None Include="Themes\Flex\Content\compiled\theme.css" />
     <Content Include="Themes\Flex\Content\images\grippy.png" />
     <Content Include="Themes\Flex\Content\_megamenu.scss" />
@@ -1869,6 +1878,8 @@
     <None Include="Web.PluginDev.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\editors\CodeMirror\js\" />
@@ -1895,11 +1906,6 @@
   <ItemGroup>
     <Content Include="Views\Shared\Partials\Head.cshtml" />
     <Content Include="Views\Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
@@ -2084,10 +2090,11 @@
       <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props'))" />
-    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props'))" />
     <Error Condition="!Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props'))" />
     <Error Condition="!Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.0.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props'))" />
+    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x64.1.2.0\build\LibSassHost.Native.win-x64.props'))" />
+    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x86.1.2.0\build\LibSassHost.Native.win-x86.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
   </Target>
 </Project>

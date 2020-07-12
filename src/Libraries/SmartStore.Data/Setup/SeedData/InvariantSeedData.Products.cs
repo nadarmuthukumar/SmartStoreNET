@@ -125,7 +125,7 @@ namespace SmartStore.Data.Setup
                 Name = "Furniture"
             };
 
-            _ctx.Set<Product>().Where(x => x.ProductCategories.Any(x => x.Category.ParentCategoryId == 4)).Each(y => y.ProductTags.Add(productTagFurniture));
+            _ctx.Set<Product>().Where(x => x.ProductCategories.Any(x1 => x1.Category.ParentCategoryId == 4)).Each(y => y.ProductTags.Add(productTagFurniture));
 
             #endregion Tag Furniture
 
